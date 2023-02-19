@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DateComponent {
   data: Date = new Date();
+
+  ngOnInit():void{
+    setInterval(() => {
+      this.data = new Date();
+    }, 1000);
+  }
 }
