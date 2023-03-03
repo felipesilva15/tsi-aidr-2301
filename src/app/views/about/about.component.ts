@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-  title: string = 'Sobre a aplicação';
+  nome: string = 'Felipe Silva';
+  semestre: string = '3º Semestre';
+  imagem: string = 'assets/chart.png'
+
+  somar(n1: number, n2: number): number{
+    return n1 + n2;
+  }
 }
