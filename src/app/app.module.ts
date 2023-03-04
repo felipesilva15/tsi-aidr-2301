@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DateComponent } from './views/date/date.component';
-import { AboutComponent } from './views/about/about.component';
+import { PropbindComponent } from './views/propbind/propbind.component';
+import { Ex01Component } from './views/ex01/ex01.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DateComponent,
-    AboutComponent
+    PropbindComponent,
+    Ex01Component
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DateComponent } from './date.component';
+import { PropbindComponent } from './propbind.component';
 
-describe('DateComponent', () => {
-  let component: DateComponent;
-  let fixture: ComponentFixture<DateComponent>;
+describe('PropbindComponent', () => {
+  let component: PropbindComponent;
+  let fixture: ComponentFixture<PropbindComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DateComponent ]
+      declarations: [ PropbindComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DateComponent);
+    fixture = TestBed.createComponent(PropbindComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
