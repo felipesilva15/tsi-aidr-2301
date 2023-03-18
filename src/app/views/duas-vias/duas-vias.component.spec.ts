@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PropbindComponent } from './propbind.component';
+import { DuasViasComponent } from './duas-vias.component';
 
-describe('PropbindComponent', () => {
-  let component: PropbindComponent;
-  let fixture: ComponentFixture<PropbindComponent>;
+describe('DuasViasComponent', () => {
+  let component: DuasViasComponent;
+  let fixture: ComponentFixture<DuasViasComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PropbindComponent ]
+      declarations: [ DuasViasComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PropbindComponent);
+    fixture = TestBed.createComponent(DuasViasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

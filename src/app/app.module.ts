@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PropbindComponent } from './views/propbind/propbind.component';
+import { DuasViasComponent } from './views/duas-vias/duas-vias.component';
+import { FormsModule } from '@angular/forms';
 import { Ex01Component } from './views/ex01/ex01.component';
+import { Ex02Component } from './views/ex02/ex02.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PropbindComponent,
-    Ex01Component
+    DuasViasComponent,
+    Ex01Component,
+    Ex02Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
