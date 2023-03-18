@@ -1,0 +1,16 @@
+img{
+  max-width: 500px;
+  padding: 10px;
+}
+
+.img01{
+  opacity: 0.25;
+}
+
+.img02{
+  border-radius: 50%;
+}
+
+.img03{
+  transform: rotate(180deg);
+}
