@@ -1,0 +1,10 @@
+<div>
+  <h2>Exercício 03</h2>
+  <label for="curso">Selecione uma empresa</label><br>
+  <select id="curso" [(ngModel)]="empresa">
+    <option value="kitkat.webp">Kit Kat</option>
+    <option value="burguer-king.webp">Burguer King</option>
+    <option value="nike.webp">Nike</option>
+  </select><br>
+  <img src="{{ 'assets/' + empresa }}" alt="Logomarca">
+</div>

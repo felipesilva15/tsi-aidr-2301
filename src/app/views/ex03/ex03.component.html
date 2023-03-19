@@ -1,0 +1,17 @@
+<div>
+  <h2>Exercício 03</h2>
+  <label for="curso">Selecione um curso</label>
+  <select id="curso" [(ngModel)]="curso">
+    <option value="Sistemas para internet">Sistemas para internet</option>
+    <option value="Análise e desenvolvimento de sistemas">Análise e desenvolvimento de sistemas</option>
+    <option value="Ciência da computação">Ciência da computação</option>
+    <option value="Engenharia de computação">Engenharia de computação</option>
+  </select><br>
+  <label for="candidato">Informe o seu nome</label>
+  <input type="text" id="candidato" [(ngModel)]="candidato">
+  <br><br>
+  <div>
+    <span class="bold">Candidato: </span><span>{{ candidato }}</span><br>
+    <span class="bold">Curso selecionado: </span><span>{{ curso }}</span>
+  </div>
+</div>
