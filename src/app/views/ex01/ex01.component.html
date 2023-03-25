@@ -1,7 +1,5 @@
 <div>
-  <h2>Exercício 01</h2>
-  <input type="number" placeholder="Valor 1" [(ngModel)]="n1">
-  <span> + </span>
-  <input type="number" placeholder="Valor 2" [(ngModel)]="n2">
-  <p>A soma entre os valores é de <strong>{{ n1 + n2 }}</strong></p>
+    <h2>Exercício 01</h2>
+    <button (click)="trocarVisibilidade()">Trocar visibilidade</button>
+    <div class="box" *ngIf="exibir"></div>
 </div>

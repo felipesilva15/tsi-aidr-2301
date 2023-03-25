@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./ex01.component.css']
 })
 export class Ex01Component {
-  n1: number = 0
-  n2: number = 0
+  exibir: boolean = false;
+
+  trocarVisibilidade(): void{
+    this.exibir = !this.exibir;
+  }
 }

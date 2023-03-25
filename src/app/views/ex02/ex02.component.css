@@ -1,4 +1,12 @@
 img{
-  width: 50%;
-  object-fit: contain;
+    width: 30px;
+}
+
+input, img{
+    height: 30px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
 }

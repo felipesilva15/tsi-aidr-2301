@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./ex02.component.css']
 })
 export class Ex02Component {
-  dog: string = '';
-  check: boolean = false;
+  nome: string = '';
 }

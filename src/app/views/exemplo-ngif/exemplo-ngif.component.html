@@ -1,0 +1,15 @@
+<div>
+    <h2>Exemplo ngIf 01</h2>
+    <button (click)="toogle()">ON / OFF</button><br>
+    <img *ngIf="ativado" width="80px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Light_Bulb_or_Idea_Flat_Icon_Vector.svg/473px-Light_Bulb_or_Idea_Flat_Icon_Vector.svg.png" alt="">
+</div>
+
+<hr>
+
+<div>
+    <h2>Exemplo ngIf 02</h2>
+    <input type="text" [(ngModel)]="nome">
+    <div *ngIf="nome != ''">
+        Nome: {{ nome }}
+    </div>
+</div>

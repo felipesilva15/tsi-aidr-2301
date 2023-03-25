@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DuasViasComponent } from './duas-vias.component';
+import { ExemploNgifComponent } from './exemplo-ngif.component';
 
-describe('DuasViasComponent', () => {
-  let component: DuasViasComponent;
-  let fixture: ComponentFixture<DuasViasComponent>;
+describe('ExemploNgifComponent', () => {
+  let component: ExemploNgifComponent;
+  let fixture: ComponentFixture<ExemploNgifComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DuasViasComponent ]
+      declarations: [ ExemploNgifComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DuasViasComponent);
+    fixture = TestBed.createComponent(ExemploNgifComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
