@@ -10,6 +10,8 @@ import { Ex02Component } from './views/ex02/ex02.component';
 import { Ex03Component } from './views/ex03/ex03.component';
 import { Ex04Component } from './views/ex04/ex04.component';
 import { Ex05Component } from './views/ex05/ex05.component';
+import { ExemploNgforComponent } from './views/exemplo-ngfor/exemplo-ngfor.component';
+import { ExFor01Component } from './views/ex-for01/ex-for01.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { Ex05Component } from './views/ex05/ex05.component';
     Ex02Component,
     Ex03Component,
     Ex04Component,
-    Ex05Component
+    Ex05Component,
+    ExemploNgforComponent,
+    ExFor01Component
   ],
   imports: [
     BrowserModule,
