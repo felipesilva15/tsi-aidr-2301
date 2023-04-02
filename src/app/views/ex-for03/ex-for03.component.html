@@ -1,0 +1,9 @@
+<div>
+    <h2>Exercício ngFor 03</h2>
+    <strong>Lista de países</strong><br>
+    <ul>
+        <li *ngFor="let pais of paises" (click)="exibirMensagem(pais)">
+            {{ pais }}
+        </li>
+    </ul>
+</div>

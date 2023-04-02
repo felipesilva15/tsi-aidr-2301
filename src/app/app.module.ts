@@ -12,6 +12,10 @@ import { Ex04Component } from './views/ex04/ex04.component';
 import { Ex05Component } from './views/ex05/ex05.component';
 import { ExemploNgforComponent } from './views/exemplo-ngfor/exemplo-ngfor.component';
 import { ExFor01Component } from './views/ex-for01/ex-for01.component';
+import { ExFor02Component } from './views/ex-for02/ex-for02.component';
+import { ExFor03Component } from './views/ex-for03/ex-for03.component';
+import { ExFor04Component } from './views/ex-for04/ex-for04.component';
+import { ExFor05Component } from './views/ex-for05/ex-for05.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { ExFor01Component } from './views/ex-for01/ex-for01.component';
     Ex04Component,
     Ex05Component,
     ExemploNgforComponent,
-    ExFor01Component
+    ExFor01Component,
+    ExFor02Component,
+    ExFor03Component,
+    ExFor04Component,
+    ExFor05Component
   ],
   imports: [
     BrowserModule,

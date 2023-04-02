@@ -1,0 +1,15 @@
+<div>
+    <h2>Exercício ngFor 05</h2>
+    <div>
+        <label for="nome">Digite um nome</label><br>
+        <input type="text" [(ngModel)]="nome">
+        &nbsp;
+        <button (click)="adicionarNome()">Adicionar na lista</button>
+    </div><br>
+    <strong>Lista de nomes</strong>
+    <ol>
+        <li *ngFor="let item of listaNomes">
+            {{ item }}
+        </li>
+    </ol>
+</div>

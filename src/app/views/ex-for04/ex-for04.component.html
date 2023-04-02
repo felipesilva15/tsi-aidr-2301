@@ -1,0 +1,8 @@
+<div>
+    <h2>Exercício ngFor 04</h2>
+    <strong>Posts</strong><br>
+    <div *ngFor="let titulo of titulos; let i = index" class="post">
+        <strong>{{ titulo }}</strong>
+        <p>{{ posts[i] }}</p>
+    </div>
+</div>
