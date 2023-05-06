@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExemploNgifComponent } from './exemplo-ngif.component';
+import { BuscaCepComponent } from './busca-cep.component';
 
-describe('ExemploNgifComponent', () => {
-  let component: ExemploNgifComponent;
-  let fixture: ComponentFixture<ExemploNgifComponent>;
+describe('BuscaCepComponent', () => {
+  let component: BuscaCepComponent;
+  let fixture: ComponentFixture<BuscaCepComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExemploNgifComponent ]
+      declarations: [ BuscaCepComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExemploNgifComponent);
+    fixture = TestBed.createComponent(BuscaCepComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
