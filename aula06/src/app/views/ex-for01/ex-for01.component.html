@@ -1,0 +1,9 @@
+<div>
+    <h2>Exercício ngFor 01</h2>
+    <strong>Lista de filmes</strong>
+    <ol>
+        <li *ngFor="let filme of filmes; let i = index" [id]="i">
+            {{ filme }}
+        </li>
+    </ol>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <h2>Exercício 04</h2>
+    <select [(ngModel)]="tipoContato">
+        <option value="whatsapp">WhatsApp</option>
+        <option value="email">E-mail</option>
+    </select><br>
+    <div *ngIf="tipoContato == 'email'">
+        <label>E-mail</label>
+        <input type="email">
+    </div>
+
+    <div *ngIf="tipoContato == 'whatsapp'">
+        <label>WhatsApp</label>
+        <input type="tel">
+    </div>
+</div>

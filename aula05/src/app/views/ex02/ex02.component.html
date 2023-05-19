@@ -1,0 +1,8 @@
+<div>
+  <h2>Exercício 02</h2>
+  <label>Digite o nome do cachorro</label><br>
+  <input type="text" [(ngModel)]="dog"><br>
+  <input type="checkbox" [(ngModel)]="check">
+
+  <img src="{{ 'assets/' + dog.toLocaleLowerCase().trim() + '.jpg' }}" *ngIf="dog != ''" alt="">
+</div>
