@@ -16,8 +16,13 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.urlBase);
   }
 
+  // GET/:id
+  obter(id: number): Observable<Cliente> {
+    return this.http.get<Cliente>(`${this.urlBase}/${id}`);
+  }
+
   // POST
-  inserir(cliente:Cliente){
+  inserir(cliente: Cliente){
     return this.http.post<Cliente>(this.urlBase, cliente);
   }
 

@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="my-3 p-4 rounded shadow">
+    <h2 class="mb-4">Listar clientes</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of listaCliente">
+          <td>{{ cliente.id }}</td>
+          <td class="hand-cursor" (click)="selecionar(cliente)">{{ cliente.nome }}</td>
+          <td>{{ formatarCpf(cliente.cpf) }}</td>
+          <td>
+            <div class="fw-bold text-danger hand-cursor" (click)="excluir(cliente.id)">X</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="my-3 p-4 rounded shadow">
+    <h2 class="mb-4">{{ estaEditando ? 'Atualizar' : 'Cadastrar' }} cliente</h2>
+    <div class="mb-2">
+      <label for="nome" class="form-label">Nome <span class="fw-bold text-danger">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        [(ngModel)]="cliente.nome"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="cpf" class="form-label">CPF <span class="fw-bold text-danger">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        id="cpf"
+        maxlength="11"
+        [(ngModel)]="cliente.cpf"
+      />
+    </div>
+    <button (click)="salvar()" class="btn btn-primary">Salvar</button>
+    <button *ngIf="estaEditando" (click)="cancelar()" class="btn btn-light ms-2">Cancelar</button>
+  </div>
+  <!-- <div class="my-3 p-4 rounded shadow">
+    <h2 class="mb-4">Atualizar cliente</h2>
+    <div>
+        <label for="idClienteAtt" class="form-label">Selecione o cliente <span class="fw-bold text-danger">*</span></label>
+        <select class="form-select mb-4" id="idClienteAtt" [(ngModel)]="idClienteAtualizar" (change)="obter()">
+        <option value="0">-- Selecione --</option>
+        <option *ngFor="let cliente of listaCliente" value="{{ cliente.id }}">{{ cliente.id + ' - ' + cliente.nome }}</option>
+    </select>
+    <hr>
+    </div>
+    <div class="mb-2">
+      <label for="nome" class="form-label">Nome <span class="fw-bold text-danger">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        [(ngModel)]="clienteAtt.nome"
+      />
+    </div>
+    <div class="mb-4">
+      <label for="cpf" class="form-label">CPF <span class="fw-bold text-danger">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        id="cpf"
+        maxlength="11"
+        [(ngModel)]="clienteAtt.cpf"
+      />
+    </div>
+    <button (click)="atualizar()" class="btn btn-primary">Atualizar</button>
+  </div> -->
+  <!-- <div class="my-3 p-4 rounded shadow">
+    <h2 class="mb-4">Excluir cliente</h2>
+    <label for="idCliente" class="form-label">Selecione o cliente <span class="fw-bold text-danger">*</span></label>
+    <select class="form-select mb-4" id="idCliente" [(ngModel)]="idClienteExcluir" >
+        <option value="0">-- Selecione --</option>
+        <option *ngFor="let cliente of listaCliente" value="{{ cliente.id }}">{{ cliente.id + ' - ' + cliente.nome }}</option>
+      </select>
+    <button (click)="excluir()" class="btn btn-primary">Excluir</button>
+  </div> -->
+</div>

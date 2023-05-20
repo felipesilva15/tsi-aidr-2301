@@ -21,6 +21,16 @@
       "nome": "Felipe Silva",
       "cpf": "56489563585",
       "id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Roberto Carlos",
+      "cpf": "75963528415"
+    },
+    {
+      "id": 3,
+      "nome": "Manoel Gomes",
+      "cpf": "45865239585"
     }
   ]
 }
