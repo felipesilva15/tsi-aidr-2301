@@ -1,0 +1,11 @@
+mat-toolbar-row > span {
+    margin-right: 20px;
+}
+
+mat-sidenav-content {
+    min-height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+    min-width: 240px;
+}

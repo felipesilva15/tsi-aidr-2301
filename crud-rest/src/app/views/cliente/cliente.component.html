@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="my-3 p-4 rounded shadow">
-    <h2 class="mb-4">Listar clientes</h2>
-    <table class="table table-striped">
+<!-- <div *ngIf="listaCliente && listaCliente.length > 0; else loading">
+  <div>
+    <h2>Listar clientes</h2>
+    <table>
       <thead>
         <tr>
           <th>#</th>
@@ -13,77 +13,80 @@
       <tbody>
         <tr *ngFor="let cliente of listaCliente">
           <td>{{ cliente.id }}</td>
-          <td class="hand-cursor" (click)="selecionar(cliente)">{{ cliente.nome }}</td>
+          <td (click)="selecionar(cliente)">{{ cliente.nome }}</td>
           <td>{{ formatarCpf(cliente.cpf) }}</td>
           <td>
-            <div class="fw-bold text-danger hand-cursor" (click)="excluir(cliente.id)">X</div>
+            <div (click)="excluir(cliente.id)">X</div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="my-3 p-4 rounded shadow">
-    <h2 class="mb-4">{{ estaEditando ? 'Atualizar' : 'Cadastrar' }} cliente</h2>
-    <div class="mb-2">
-      <label for="nome" class="form-label">Nome <span class="fw-bold text-danger">*</span></label>
+  <div>
+    <h2>{{ estaEditando ? 'Atualizar' : 'Cadastrar' }} cliente</h2>
+    <div>
+      <label for="nome">Nome <span class="fw-bold text-danger">*</span></label>
       <input
         type="text"
-        class="form-control"
         id="nome"
         [(ngModel)]="cliente.nome"
       />
     </div>
     <div class="mb-4">
-      <label for="cpf" class="form-label">CPF <span class="fw-bold text-danger">*</span></label>
+      <label for="cpf">CPF <span class="fw-bold text-danger">*</span></label>
       <input
         type="text"
-        class="form-control"
         id="cpf"
         maxlength="11"
         [(ngModel)]="cliente.cpf"
       />
     </div>
-    <button (click)="salvar()" class="btn btn-primary">Salvar</button>
-    <button *ngIf="estaEditando" (click)="cancelar()" class="btn btn-light ms-2">Cancelar</button>
+    <button (click)="salvar()">Salvar</button>
+    <button *ngIf="estaEditando" (click)="cancelar()">Cancelar</button>
   </div>
-  <!-- <div class="my-3 p-4 rounded shadow">
-    <h2 class="mb-4">Atualizar cliente</h2>
-    <div>
-        <label for="idClienteAtt" class="form-label">Selecione o cliente <span class="fw-bold text-danger">*</span></label>
-        <select class="form-select mb-4" id="idClienteAtt" [(ngModel)]="idClienteAtualizar" (change)="obter()">
-        <option value="0">-- Selecione --</option>
-        <option *ngFor="let cliente of listaCliente" value="{{ cliente.id }}">{{ cliente.id + ' - ' + cliente.nome }}</option>
-    </select>
-    <hr>
-    </div>
-    <div class="mb-2">
-      <label for="nome" class="form-label">Nome <span class="fw-bold text-danger">*</span></label>
+</div>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template> -->
+
+<div *ngIf="listaCliente && listaCliente.length > 0; else loading">
+  <div>
+    <h2>Listar clientes</h2>
+    <mat-selection-list>
+      <a mat-list-item (click)="selecionar(cliente)" *ngFor="let cliente of listaCliente">
+        <span>{{ cliente.id }} </span>
+        <span>{{ cliente.nome }} </span>
+        <span>{{ formatarCpf(cliente.cpf) }} </span>
+        <span><mat-icon class="mat-18" (click)="excluir(cliente.id)">delete</mat-icon></span>
+      </a>
+    </mat-selection-list>
+  </div>
+  <div>
+    <h2>{{ estaEditando ? 'Atualizar' : 'Cadastrar' }} cliente</h2>
+    <mat-form-field>
+      <mat-label for="nome">Nome *</mat-label>
       <input
         type="text"
-        class="form-control"
         id="nome"
-        [(ngModel)]="clienteAtt.nome"
+        [(ngModel)]="cliente.nome"
+        matInput
       />
-    </div>
-    <div class="mb-4">
-      <label for="cpf" class="form-label">CPF <span class="fw-bold text-danger">*</span></label>
+    </mat-form-field><br>
+    <mat-form-field>
+      <mat-label for="cpf">CPF *</mat-label>
       <input
         type="text"
-        class="form-control"
         id="cpf"
         maxlength="11"
-        [(ngModel)]="clienteAtt.cpf"
+        [(ngModel)]="cliente.cpf"
+        matInput
       />
-    </div>
-    <button (click)="atualizar()" class="btn btn-primary">Atualizar</button>
-  </div> -->
-  <!-- <div class="my-3 p-4 rounded shadow">
-    <h2 class="mb-4">Excluir cliente</h2>
-    <label for="idCliente" class="form-label">Selecione o cliente <span class="fw-bold text-danger">*</span></label>
-    <select class="form-select mb-4" id="idCliente" [(ngModel)]="idClienteExcluir" >
-        <option value="0">-- Selecione --</option>
-        <option *ngFor="let cliente of listaCliente" value="{{ cliente.id }}">{{ cliente.id + ' - ' + cliente.nome }}</option>
-      </select>
-    <button (click)="excluir()" class="btn btn-primary">Excluir</button>
-  </div> -->
+    </mat-form-field><br><br>
+    <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+    <button mat-raised-button *ngIf="estaEditando" (click)="cancelar()">Cancelar</button>
+  </div>
 </div>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
+

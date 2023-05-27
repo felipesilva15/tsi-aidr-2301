@@ -1,1 +1,22 @@
-<app-cliente></app-cliente>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>CRUD REST</span> 
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" [opened]="false">
+        <mat-selection-list>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="/">Home</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="cliente">Cliente</a>
+            <a (click)="sidenav.toggle()" mat-list-item routerLink="sobre">Sobre</a>  
+        </mat-selection-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-card>
+            <router-outlet></router-outlet>
+        </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
